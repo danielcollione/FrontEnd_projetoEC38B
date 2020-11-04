@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./login.css";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-require('dotenv').config()
+require('dotenv').config();
 
 function initialState() {
   return { user: "", password: "" };
