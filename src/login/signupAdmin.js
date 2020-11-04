@@ -26,7 +26,7 @@ export default function SignUpAdmin() {
 
   async function signup({ user, password }) {
     try {
-      const token = await axios.post("http://localhost:4200/api/adm/register", values);
+      const token = await axios.post(`${process.env.REACT_APP_API_URL}/api/adm/register`, values);
       console.log(token);
       return token;
     } catch (err) {
