@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./login.css";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+require('dotenv').config()
 
 function initialState() {
   return { user: "", password: "" };
@@ -26,7 +27,7 @@ export default function SignUp() {
 
   async function signup({ user, password }) {
     try {
-      const token = await axios.post("http://localhost:4200/api/register", values);
+      const token = await axios.post(`${process.env.REACT_APP_API_URL}/api/register`, values);
       // const token = await axios.post("https://reqres.in/api/register", values);
       console.log(token);
       return token;
