@@ -1,0 +1,215 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 98rem;
+    margin: 0 auto;
+    padding: 0 2.2rem;
+}
+
+
+/* Header */
+
+body{
+    background-color: rgb(245, 245, 245);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1400;
+    height: 4.4rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    backdrop-filter: blur(2rem);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 -1rem;
+}
+
+.nav-link {
+    font-size: 1.4rem;
+    color: #fff;
+    padding: 0 1rem;
+    transition: opacity .5s;
+}
+
+.nav-link:hover {
+    opacity: .7;
+}
+
+.nav-link-apple {
+    width: 1.6rem;
+    height: 4.4rem;
+    background: url("./resources/apple.svg") center no-repeat;
+}
+
+.nav-link-search {
+    width: 1.6rem;
+    height: 4.4rem;
+    background: url("./resources/search.svg") center no-repeat;
+}
+
+.nav-link-bag {
+    width: 1.4rem;
+    height: 4.4rem;
+    background: url("./resources/bag.svg") center no-repeat;
+}
+
+
+/* iPhone 11 Pro */
+
+.iphone-11-pro {
+    background: url("./resources/img/iphone-11-pro/iphone_11_pro_large.jpg");
+    margin-top: 4.4rem;
+}
+
+.title {
+    color: #fff;
+    text-align: center;
+    padding-top: 5.5rem;
+}
+
+.title-heading {
+    font-size: 5.6rem;
+    line-height: 1.07143;
+    letter-spacing: -0.005rem;
+}
+
+.title-sub-heading {
+    font-size: 2.65rem;
+    margin-top: .6rem;
+    letter-spacing: .008rem;
+    font-weight: 400;
+}
+
+.title-price {
+    font-size: 1.7rem;
+    color: #888;
+    margin-top: .68rem;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 1.8rem;
+}
+
+.cta-link {
+    color: #66bbff;
+    font-size: 2.1rem;
+    display: inline-block;
+}
+
+.cta-link:nth-child(2) {
+    margin-left: 2.6rem;
+}
+
+.cta-link:hover {
+    border-bottom: 2px solid #66bbff;
+}
+
+
+/*iPhone 11 section */
+
+.iphone-11 {
+    background-image: url("./resources/img/iphone-11/iphone_11_large.jpg");
+}
+
+.title-dark {
+    color: #000;
+}
+
+.cta-link-darker {
+    color: #0070c9;
+}
+
+.cta-link-darker:hover {
+    border-bottom-color: #0070c9;
+}
+
+.watch {
+    background: url("./resources/img/watch/watch_large.jpg");
+}
+
+.title-heading-watch {
+    height: 7.8rem;
+    background: url("./resources/img/watch/logo_watch_medium.png") center no-repeat;
+    background-size: auto 7.8rem;
+    margin-top: 1.6rem;
+}
+
+.hero {
+    height: 69.2rem;
+    background-size: auto 73.6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: .6rem solid #fff;
+    border-bottom: .6rem solid #fff;
+}
+
+.iphone-11-pro {
+    border-top: none;
+}
+
+footer{
+  margin: 0;
+  padding: 0;
+    width: 100%;
+    font-family: sans-serif; 
+}
+
+.section-footer {
+    color: rgb(138, 130, 130);  
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 0 22px;
+}
+
+
+
+.item-lista li{
+    list-style-type: none;
+    margin: 10px;
+    font-size: 13px;
+}
+
+.item-lista li a{
+    color: black;
+}
+
+.section-footer2{
+    margin: 10px;
+    color: rgb(167, 157, 157);  
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 0 22px;
+    margin-bottom: 20px;
+}
+
+.section-footer2 p{
+    margin: 10px;
+    font-size: 13px;
+}
+
+.hidden {
+  display: none;
+}
