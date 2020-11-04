@@ -44,13 +44,13 @@ export default function Login () {
       console.log('token.data => ', res.data);
       return res.data
     } catch(err){
-      console.log('usuario nao encontrado');
+      setError('Falha a conectar o servidor!');
     }
   }
 
   async function onSubmit(event) {
     event.preventDefault();
-    if(values.email === undefined || values.email.length < 5){
+    if(values.email === undefined || values.email.length < 5 || values.email.search("@")==-1){
       setError("Preencha um email válido!");
     } else {
       const user = await login(values);
@@ -64,7 +64,7 @@ export default function Login () {
         return history.push('/lojapokemon');
         
       } else {
-        
+        if(setError == 0)
         setError('Usuário não foi encontrado.');
       }
     }

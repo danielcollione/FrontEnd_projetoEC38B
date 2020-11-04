@@ -27,12 +27,12 @@ export default function SignUp() {
 
   async function signup({ user, password }) {
     try {
-      const token = await axios.post(`${process.env.REACT_APP_API_URL}/api/register`, values);
+      const token = await axios.post(`http://localhost:4200/api/register`, values);
       // const token = await axios.post("https://reqres.in/api/register", values);
       console.log(token);
       return token;
     } catch (err) {
-      console.log("nao foi possivel cadastrar");
+      setErrorCreate("Falha a conectar o servidor!");
     }
   }
 
@@ -40,7 +40,7 @@ export default function SignUp() {
     event.preventDefault();
     console.log(values.email);
     console.log(values.password);
-    if (values.email === undefined || values.email.length < 5) {
+    if (values.email === undefined || values.email.length < 5 || values.email.search("@")==-1) {
       setError("Preencha um email válido!");
     } else if (values.password === "") {
       setErrorWord("Preencha senha para cadastrar!");
@@ -54,8 +54,7 @@ export default function SignUp() {
         setTimeout(() => {return history.push("/login");}, 2000)
         
       } else {
-        setError('')
-        setSuccess('')
+        if(setErrorCreate == 0)
         setErrorCreate("Email já cadastrado!");
       }
     }
