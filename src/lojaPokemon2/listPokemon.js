@@ -16,7 +16,7 @@ export default function ListPokemon(props) {
   // }, []);
 
   useEffect(() => {
-    axios.get("http://localhost:4200/getPokemons").then((res) => {
+    axios.get(`${process.env.REACT_APP_API_URL}/getPokemons`).then((res) => {
       setPokemon(res.data.map((p) => p));
     });
     

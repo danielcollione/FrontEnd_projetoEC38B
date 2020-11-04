@@ -50,7 +50,7 @@ export default function NovoPokemon() {
 
   async function cadastrarPokemon({ name, preco }) {
     try {
-      const res = await axios.post("http://localhost:4200/novoPokemon", values);
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/novoPokemon`, values);
       // const token = await axios.post("https://reqres.in/api/register", values);
       console.log(res.data);
       return res.data;
