@@ -39,6 +39,7 @@ export default function Login () {
 
   async function login({ user, password}){
     try{
+      console.log('Endereco da Api Publicada: ', process.env.REACT_APP_API_URL);
       // const token = await axios.post('https://reqres.in/api/login', values);
       const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/login`, values);
       console.log('values => ', values);

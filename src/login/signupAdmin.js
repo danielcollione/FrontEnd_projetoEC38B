@@ -27,7 +27,7 @@ export default function SignUpAdmin() {
 
   async function signup({ user, password }) {
     try {
-      console.log(process.env.REACT_APP_API_URL);
+      console.log('Endereco da Api Publicada: ', process.env.REACT_APP_API_URL);
       const token = await axios.post(`${process.env.REACT_APP_API_URL}/api/adm/register`, values);
       console.log(token);
       return token;
